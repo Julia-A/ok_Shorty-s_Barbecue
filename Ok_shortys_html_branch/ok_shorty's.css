@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: ##FF3300
+;
 }
 
 header {
@@ -31,12 +32,23 @@ main {
     padding: 2em;
 }
 
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between images */
+}
+
+.special-img {
+    width: 30%;
+    height: auto; /* Maintain aspect ratio */
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
-}
