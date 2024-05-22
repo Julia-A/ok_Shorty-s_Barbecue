@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="./public/styling/styles.css">
+
+    <!-- Bootstrap icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <title>Ok Short's Barbecue</title>
+</head>
+<body>
+    <!-- HEADER -->
+
+    <header>
+        <!-- navigation bar -->
+        <nav>
+            <img src="./public/images/logo1.png" alt="Ok shorty's logo">
+
+            <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAXE7xoRUOTNRSzhMUEdWS1RXQ0FQUlRBTTJRREE4US4u&origin=QRCode&qrcodeorigin=presentation&fswReload=1&fswNavStart=1716376354269"><h1 id="order">Order Now!!!</h1></a>
+        </nav>
+
+    </header>
+
+    <main>
+        <h2>What do you want to eat today?</h2>
+
+        <section class="images-and-menu">
+            <div class="individual-menu">
+                <img src="./public/images/IMG-20240519-WA0003.jpg" alt="description">
+                <p>spaghetti</p>
+            </div>
+            
+            <div class="individual-menu">
+                <img src="./public/images/IMG-20240519-WA0007.jpg" alt="description">
+                <p>burger</p>
+            </div>
+            <div class="individual-menu">
+                <img src="./public/images/IMG-20240519-WA0009.jpg" alt="description">
+                <p>roasted chicken </p>
+            </div>
+            <div class="individual-menu">
+                <img src="./public/images/IMG-20240519-WA0010.jpg" alt="description">
+                <p>hot dog</p>
+            </div>
+            <div class="individual-menu">
+                <img src="./public/images/IMG-20240519-WA0015.jpg" alt="description">
+                <p>sharwama</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <div id="location">
+                <i class="bi bi-geo-alt"></i>
+                <a href="./">
+                    <p>Agungi, Lekki, Lagos, Nigeria.</p>
+                </a>
+            </div>
+
+            <div id="location">
+                <i class="bi bi-telephone"></i>
+                <a href="./">
+                    <p>+234 (90) 2987 1256</p>
+                </a>
+            </div>
+
+            <div id="location">
+                <i class="bi bi-instagram"></i>
+                <a href="./">
+                    <p>@shortys_bbq</p>
+                </a>
+            </div>
+
+            <div id="location">
+                <i class="bi bi-globe"></i>
+                <a href="./">
+                    <p>www.okshortysbarbecue.com</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle the visibility of the h1 element
+        function toggleBlink() {
+          const h1 = document.getElementById('order');
+          h1.style.visibility = (h1.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }
+      
+        // Set interval to call the toggleBlink function every 500 milliseconds
+        setInterval(toggleBlink, 500);
+      </script>
+</body>
+</html>
