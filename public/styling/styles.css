@@ -1,111 +1,264 @@
-body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Karla", sans-serif;
-    background-color: peachpuff;
+    font-family: "Wix Madefor Text", sans-serif;
 }
 
 
 /* Navigation bar / hero section */
 nav {
-    background-color: red;
-    width: 100%;
+    background-color: black;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 2rem;
     align-items: center;
 }
 
 nav img {
-    width: 50%;
-    max-width: 500px;
-    object-fit: contain;
-    margin: auto;
+    width: 9rem;
 }
 
-nav a {
-    color: orange;
-    font-size: 2rem;
-    text-decoration: none;
-    text-align: center;
-}
-
-
-/* Main */
-main {
-    padding-inline: 2rem;
-}
-
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: orange;
-    margin: 3rem 0 5rem;
-}
-
-main .images-and-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    margin: auto;
-}
-
-.images-and-menu .individual-menu {
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    margin: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+nav ul a:hover {
+    color: #FEAA17;
+}
+
+nav ul a li {
+    list-style: none;
+}
+
+nav .dropdown {
+    display: none;
+}
+
+
+/* media query for nav bar */
+@media(max-width: 768px) {
+
+    nav {
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav .dropdown {
+        display: block;
+    }
+
+    nav .dropdown .bi-list {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        color: #FEAA17;
+    }
+
+    nav .dropdown .dropdown-menu {
+        background-color: #FF3F16;
+    }
+}
+
+
+
+/* Main section */
+
+/*                               Banner / Hero               */
+
+main .hero {
+    width: 100%;
+    height: 100vh;
+    padding-inline: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url('/public/images/hero_photo_of_spag.jpg');
+    /* background-repeat: no-repeat;*/
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .hero-text {
+    color: white;
+}
+
+.hero .hero-text h1 {
+    font-size: 3.5rem;
+    color: #FF3F16;
+}
+
+.hero .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero .hero-buttons .individual-hero-button {
+    text-decoration: none;
+    border: 1px solid #FEAA17;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+.hero .hero-buttons .individual-hero-button:hover {
+    color: #FEAA17;
+}
+
+/* media query for banner/hero section */
+@media (max-width: 768px) {
+    .hero .hero-text h1 {
+        font-size: 2.9rem;
+    }
+}
+
+
+
+
+
+/*                Our menu                */
+
+main .our-menu {
+    padding: 2rem 2rem;
+    background-color: black;
+}
+
+main .our-menu .specials h3, main .our-menu  h3 {
+    text-align: center;
+    color: #FEAA17;
+    padding-block: 1.5rem;
+}
+
+main .our-menu .specials {
+    margin-bottom: 2rem;
+    width: 80%;
+    margin: auto;
+}
+
+main .our-menu .specials .individual-item {
+    margin-bottom: 1rem;
+}
+
+
+
+main .our-menu h2 {
+    text-align: center;
+    color: #FF3F16;
+    margin-bottom: 3rem;
+}
+
+main .our-menu .menu-container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+main .our-menu .menu-container .individual-item,
+main .our-menu .specials .individual-item {
+    display: flex;
     gap: 1rem;
+    align-items: end;
 }
 
-.images-and-menu .individual-menu img {
+
+main .our-menu .menu-container .individual-item img,
+main .our-menu .specials .individual-item img {
     width: 50%;
-    height: auto;
-    border: 2px solid orange;
-    border-radius: 10px;
     object-fit: cover;
+    border: 2px solid #FEAA17;
+    border-radius: 15px;
 }
 
-.images-and-menu .individual-menu p {
-    font-size: 2rem;
-    font-weight: bold;
+main .our-menu .menu-container .individual-item .price-and-tag,
+main .our-menu .specials .individual-item .price-and-tag {
+    color: white;
+}
+
+main .our-menu .menu-container .individual-item .price-and-tag a,
+main .our-menu .specials .individual-item .price-and-tag a{
+    text-decoration: none;
+    color: #FF3F16;
+    font-size: 0.7rem;
+}
+
+main .our-menu .menu-container .individual-item .price-and-tag a:hover,
+main .our-menu .specials .individual-item .price-and-tag a:hover{
+    color: #FEAA17;
 }
 
 
-/* Media query for images and menu section */
+main .our-menu .menu-container .individual-item .price-and-tag #price,
+main .our-menu .specials .individual-item .price-and-tag #price {
+    font-size: 0.8rem;
+    color: #FEAA17;
+}
 
-@media (max-width: 700px) {
-    main .images-and-menu {
+/* Media query for Menu section */
+@media (max-width: 768px) {
+
+    main .our-menu {
+        padding: 0;
+    }
+    main .our-menu .menu-container {
         display: flex;
         flex-direction: column;
-        /* background-color: black; */
     }
 
-    .images-and-menu .individual-menu img {
-        width: 100%;
+    main .our-menu .menu-container .individual-item,
+    main .our-menu .specials .individual-item{
+        align-items: center;
+
     }
 
-    .images-and-menu .individual-menu {
-        flex-direction: column;
-        gap: 0;
+    main .our-menu .menu-container .individual-item img,
+    main .our-menu .specials .individual-item img {
+        width: 150px;
+        height: 150px;
     }
 
-    .images-and-menu .individual-menu p {
-        margin: 0;
+    main .our-menu {
+        padding: 2rem 0;
     }
+
+    main .our-menu .menu-container .individual-item .price-and-tag,
+main .our-menu .specials .individual-item .price-and-tag {
+    color: white;
+    width: 20%;
 }
-
+}
 
 
 /* footer */
 
 footer {
     background-color: red;
+    padding: 3rem;
+}
+
+.contact-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
+    align-items: start;
+    gap: 2rem;
 }
 
 .contact-info div {
@@ -122,5 +275,8 @@ footer {
 .contact-info div a {
     text-decoration: none;
     color: black;
-    
+}
+
+.contact-info div a:hover {
+    color: white;
 }
