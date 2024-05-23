@@ -194,6 +194,7 @@ main .hero {
 .our-menu .menu-container .individual-item .price-and-tag {
     width: 30%;
     font-size: 0.9rem;
+    color: white;
 }
 
 .our-menu .specials .specials-container .individual-item .price-and-tag #price,
@@ -238,7 +239,6 @@ footer {
 
 .contact-info div {
     display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -254,4 +254,11 @@ footer {
 
 .contact-info div a:hover {
     color: white;
+}
+
+
+footer #copyright {
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.5rem;
 }
