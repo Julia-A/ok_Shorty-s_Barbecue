@@ -50,7 +50,7 @@ nav .dropdown {
 @media(max-width: 768px) {
 
     nav {
-        padding: 0;
+        padding: 1rem;
     }
 
     nav ul {
@@ -89,7 +89,7 @@ main .hero {
     align-items: center;
     text-align: center;
     gap: 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url('/public/images/hero_photo_of_spag.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url('../images/hero_photo_of_spag.jpg');
     /* background-repeat: no-repeat;*/
     background-size: cover;
     background-position: center;
@@ -134,116 +134,91 @@ main .hero {
 
 /*                Our menu                */
 
-main .our-menu {
-    padding: 2rem 2rem;
+.our-menu {
     background-color: black;
+    padding: 2rem;
 }
 
-main .our-menu .specials h3, main .our-menu  h3 {
-    text-align: center;
-    color: #FEAA17;
-    padding-block: 1.5rem;
-}
-
-main .our-menu .specials {
-    margin-bottom: 2rem;
-    width: 80%;
-    margin: auto;
-}
-
-main .our-menu .specials .individual-item {
-    margin-bottom: 1rem;
-}
-
-
-
-main .our-menu h2 {
+.our-menu h2 {
     text-align: center;
     color: #FF3F16;
     margin-bottom: 3rem;
 }
 
-main .our-menu .menu-container{
-    width: 80%;
-    margin: auto;
+
+/* Specials */
+
+.our-menu .specials h3,
+.our-menu h3{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #FEAA17;
+    margin-bottom: 3rem;
+}
+
+.our-menu .specials .specials-container,
+.our-menu .menu-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
+    margin: auto;
 }
 
-main .our-menu .menu-container .individual-item,
-main .our-menu .specials .individual-item {
+.our-menu .specials .specials-container .individual-item,
+.our-menu .menu-container .individual-item {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    align-items: end;
 }
 
-
-main .our-menu .menu-container .individual-item img,
-main .our-menu .specials .individual-item img {
-    width: 50%;
-    object-fit: cover;
+.our-menu .specials .specials-container .individual-item img,
+.our-menu .menu-container .individual-item img {
     border: 2px solid #FEAA17;
     border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
 }
 
-main .our-menu .menu-container .individual-item .price-and-tag,
-main .our-menu .specials .individual-item .price-and-tag {
-    color: white;
-}
-
-main .our-menu .menu-container .individual-item .price-and-tag a,
-main .our-menu .specials .individual-item .price-and-tag a{
-    text-decoration: none;
-    color: #FF3F16;
-    font-size: 0.7rem;
-}
-
-main .our-menu .menu-container .individual-item .price-and-tag a:hover,
-main .our-menu .specials .individual-item .price-and-tag a:hover{
+.our-menu .specials .specials-container .individual-item .price-and-tag a,
+.our-menu .menu-container .individual-item .price-and-tag  a {
     color: #FEAA17;
-}
-
-
-main .our-menu .menu-container .individual-item .price-and-tag #price,
-main .our-menu .specials .individual-item .price-and-tag #price {
     font-size: 0.8rem;
-    color: #FEAA17;
 }
 
-/* Media query for Menu section */
+.our-menu .specials .specials-container .individual-item .price-and-tag,
+.our-menu .menu-container .individual-item .price-and-tag {
+    width: 30%;
+    font-size: 0.9rem;
+}
+
+.our-menu .specials .specials-container .individual-item .price-and-tag #price,
+.our-menu .menu-container .individual-item .price-and-tag #price {
+    font-size: 0.7rem;
+    color: #FF3F16;
+}
+
+
+
+/* Media Query for Menu */
+
 @media (max-width: 768px) {
-
-    main .our-menu {
-        padding: 0;
-    }
-    main .our-menu .menu-container {
-        display: flex;
-        flex-direction: column;
+    .our-menu .specials .specials-container,
+    .our-menu .menu-container {
+        display: block;
     }
 
-    main .our-menu .menu-container .individual-item,
-    main .our-menu .specials .individual-item{
-        align-items: center;
-
+    .our-menu .specials .specials-container .individual-item,
+    .our-menu .menu-container .individual-item {
+        margin-bottom: 2rem;
+        text-align: center;
     }
-
-    main .our-menu .menu-container .individual-item img,
-    main .our-menu .specials .individual-item img {
-        width: 150px;
-        height: 150px;
-    }
-
-    main .our-menu {
-        padding: 2rem 0;
-    }
-
-    main .our-menu .menu-container .individual-item .price-and-tag,
-main .our-menu .specials .individual-item .price-and-tag {
-    color: white;
-    width: 20%;
 }
-}
+
 
 
 /* footer */
